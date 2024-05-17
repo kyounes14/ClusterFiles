@@ -1,0 +1,68 @@
+3
+1
+2
+
+8
+3
+1 0 2
+2 0 2
+2 1 4
+../AtomFiles/O/ActiveConfigurationFile
+../AtomFiles/O/FluorescenceFile
+../AtomFiles/O/AugerFile
+../AtomFiles/O/PhotoionizationFile
+../AtomFiles/O/EnergyFile
+../AtomFiles/O/ResonantExcitationFile
+../AtomFiles/O/RCFile
+../AtomFiles/O/EIFile
+
+1
+1
+1 0 1
+../AtomFiles/H/ActiveConfigurationFile
+../AtomFiles/H/FluorescenceFile
+../AtomFiles/H/AugerFile
+../AtomFiles/H/PhotoionizationFile
+../AtomFiles/H/EnergyFile
+../AtomFiles/H/ResonantExcitationFile
+../AtomFiles/H/RCFile
+../AtomFiles/H/EIFile
+
+BIG_Counterfile
+
+10000.0
+0.1
+0.0
+0.001 0.003
+0 2.5e-10
+1
+0
+
+-0.3  6.0
+
+1 48121
+
+1 1 1
+
+0
+
+0 1.0e-4  0
+
+1
+
+1000
+
+0
+../AtomFiles/O/ActiveConfigurationFile
+../AtomFiles/O/OrbitalDensityFile
+../AtomFiles/H/ActiveConfigurationFile
+../AtomFiles/H/OrbitalDensityFile
+250
+
+1
+101 101 101 0.4
+ECcounterfile
+
+0
+1601 0 1
+160 0 2

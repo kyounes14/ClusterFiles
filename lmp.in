@@ -1,0 +1,60 @@
+partition yes 1 log log.lammps.0
+
+units		electron
+newton		off
+
+boundary	f f f
+atom_style	xrap2
+read_data	100k_water.dat
+
+pair_style      lj/xrapccf/xs 100.0 100.0
+pair_coeff	1 1 0.0002470111 5.7561058 # O-O interactions
+pair_coeff	1 2 0 1 # O-H LJ interactions
+pair_coeff	2 2 0 1 # Disable H-H LJ
+pair_coeff      1 3 0 1 # O-electron Coulomb
+pair_coeff      2 3 0 1 # H-electron Coulomb
+pair_coeff	3 3 0 1 # electron-electron Coulomb
+
+velocity 	all create 1 42345
+
+neigh_modify	once yes exclude type 1 1 exclude type 1 2 exclude type 1 3 exclude type 2 2 exclude type 2 3 exclude type 3 3
+
+fix		1 all xraydamage3zonesf
+
+compute         myke all ke/atom
+compute         mype all pe/atom
+
+thermo          1
+thermo_style    custom step temp press density evdwl ecoul elong etotal spcpu f_1[1] f_1[2] f_1[3] f_1[4]
+thermo_modify   lost ignore
+
+comm_style      tiled
+
+partition yes 1 dump            2 all custom 10 48121_BIG.cluster id type ConfigID q xtrue ytrue ztrue
+partition yes 1 dump_modify     2 thresh type != 3
+
+dump 3 all custom 600 test_BIG/position.xmol.* id type xtrue ytrue ztrue element
+dump_modify 3 thresh type != 3
+
+restart         600 lmp.restart
+
+timestep 	0.0005
+run_style       verlet/xrapsplit sort
+run		1200
+
+dump 4 all custom 600 test_BIG/position.xmol.* id type xtrue ytrue ztrue element
+dump_modify 4 thresh type != 3
+
+timestep 	0.01
+run_style       verlet/xrapsplit sort
+run		1200
+
+dump 5 all custom 10 test_BIG/position.xmol.* id type xtrue ytrue ztrue
+dump_modify 5 thresh type != 3
+
+dump 6 all custom 10 NVE/position.xmol.* id type ConfgidID q xtrue ytrue ztrue
+dump 7 all custom 10 NVE/velocity.xmol.* id type ConfigID q vx vy vz
+
+timestep	1
+run_style       verlet/xrapsplit sort
+run		2400
