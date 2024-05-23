@@ -7,26 +7,26 @@
 1 0 2
 2 0 2
 2 1 4
-../AtomFiles/O/ActiveConfigurationFile
-../AtomFiles/O/FluorescenceFile
-../AtomFiles/O/AugerFile
-../AtomFiles/O/PhotoionizationFile
-../AtomFiles/O/EnergyFile
-../AtomFiles/O/ResonantExcitationFile
-../AtomFiles/O/RCFile
-../AtomFiles/O/EIFile
+AtomFiles/O/ActiveConfigurationFile
+AtomFiles/O/FluorescenceFile
+AtomFiles/O/AugerFile
+AtomFiles/O/PhotoionizationFile
+AtomFiles/O/EnergyFile
+AtomFiles/O/ResonantExcitationFile
+AtomFiles/O/RCFile
+AtomFiles/O/EIFile
 
 1
 1
 1 0 1
-../AtomFiles/H/ActiveConfigurationFile
-../AtomFiles/H/FluorescenceFile
-../AtomFiles/H/AugerFile
-../AtomFiles/H/PhotoionizationFile
-../AtomFiles/H/EnergyFile
-../AtomFiles/H/ResonantExcitationFile
-../AtomFiles/H/RCFile
-../AtomFiles/H/EIFile
+AtomFiles/H/ActiveConfigurationFile
+AtomFiles/H/FluorescenceFile
+AtomFiles/H/AugerFile
+AtomFiles/H/PhotoionizationFile
+AtomFiles/H/EnergyFile
+AtomFiles/H/ResonantExcitationFile
+AtomFiles/H/RCFile
+AtomFiles/H/EIFile
 
 BIG_Counterfile
 
@@ -53,10 +53,10 @@ BIG_Counterfile
 1000
 
 0
-../AtomFiles/O/ActiveConfigurationFile
-../AtomFiles/O/OrbitalDensityFile
-../AtomFiles/H/ActiveConfigurationFile
-../AtomFiles/H/OrbitalDensityFile
+AtomFiles/O/ActiveConfigurationFile
+AtomFiles/O/OrbitalDensityFile
+AtomFiles/H/ActiveConfigurationFile
+AtomFiles/H/OrbitalDensityFile
 250
 
 1
